@@ -6,8 +6,8 @@ import redis
 from page_tracker.app import app
 
 def pytest_addoption(parser):
-    parser.addoption("--flask-url", default="http://127.0.0.1:5000/" )
-    parser.addoption("--redis-url", default="redis://localhost:9736")
+    parser.addoption("--flask-url", default="http://localhost" )
+    parser.addoption("--redis-url", default="redis://localhost:6379")
 
 @pytest.fixture(scope="session")
 def flask_url(request):
